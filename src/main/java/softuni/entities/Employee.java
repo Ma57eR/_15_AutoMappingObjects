@@ -1,24 +1,30 @@
 package softuni.entities;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-
+@Entity(name = "employees")
 public class Employee {
-
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "first_name")
     private String firstName;
+    @Column(name = "last_name")
     private String lastName;
     private BigDecimal salary;
-    private LocalDate birthday;
-    private Address address;
+    private LocalDate birthdate;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Employee manager;
 
-    public Employee(String firstName, String lastName, BigDecimal salary, LocalDate birthday, Address address) {
+    public Employee() {
+    }
 
+    public Employee(String firstName, String lastName, BigDecimal salary, LocalDate birthdate, Employee manager) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
-        this.birthday = birthday;
-        this.address = address;
+        this.birthdate = birthdate;
+        this.manager = manager;
     }
 
     public String getFirstName() {
@@ -45,31 +51,19 @@ public class Employee {
         this.salary = salary;
     }
 
-    public LocalDate getBirthday() {
-        return birthday;
+    public LocalDate getBirthdate() {
+        return birthdate;
     }
 
-    public void setBirthday(LocalDate birthday) {
-        this.birthday = birthday;
+    public void setBirthdate(LocalDate birthdate) {
+        this.birthdate = birthdate;
     }
 
-    public Address getAddress() {
-        return address;
+    public Employee getManager() {
+        return manager;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", salary=" + salary +
-                ", birthday=" + birthday +
-                ", address=" + address +
-                '}';
+    public void setManager(Employee manager) {
+        this.manager = manager;
     }
 }

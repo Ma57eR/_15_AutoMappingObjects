@@ -1,4 +1,4 @@
-package softuni.entities;
+package softuni.Demo.entities;
 
 public class Address {
 

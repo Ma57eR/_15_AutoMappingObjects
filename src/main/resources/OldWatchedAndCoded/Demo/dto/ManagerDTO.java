@@ -21,17 +21,17 @@ public class ManagerDTO {
     }
 
 
-    @Override
-    public String toString() {
-
-        String publicEmpl = employees
-                .stream()
-                .map(EmployeeDTO::toString)
-                .map(s -> "    - " + s)
-                .collect(Collectors.joining("\n"));
-
-        return String.format("%s %s | Employees: %d%n%s%n",
-                this.firstName, this.lastName, this.employees.size()
-        ,publicEmpl);
-    }
+//    @Override
+//    public String toString() {
+//
+//        String publicEmpl = employees
+//                .stream()
+//                .map(EmployeeDTO::toString)
+//                .map(s -> "    - " + s)
+//                .collect(Collectors.joining("\n"));
+//
+//        return String.format("%s %s | Employees: %d%n%s%n",
+//                this.firstName, this.lastName, this.employees.size()
+//        ,publicEmpl);
+//    }
 }
