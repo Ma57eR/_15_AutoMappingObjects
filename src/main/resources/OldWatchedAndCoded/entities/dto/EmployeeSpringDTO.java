@@ -1,4 +1,4 @@
-package softuni.entities.dto;
+package OldWatchedAndCoded.entities.dto;
 
 import java.math.BigDecimal;
 

@@ -1,4 +1,4 @@
-package softuni.Demo.entities;
+package OldWatchedAndCoded.Demo.entities;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

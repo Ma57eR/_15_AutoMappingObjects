@@ -1,15 +1,16 @@
-package softuni.Demo.entities;
+package softuni.entities;
 
 public class Address {
+
     private int id;
     private String street;
     private int streetNumber;
     private String city;
     private String country;
 
-    public Address(String street, int streetName, String city, String country) {
+    public Address(String street, int streetNumber, String city, String country) {
         this.street = street;
-        this.streetNumber = streetName;
+        this.streetNumber = streetNumber;
         this.city = city;
         this.country = country;
     }
@@ -44,5 +45,16 @@ public class Address {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "id=" + id +
+                ", street='" + street + '\'' +
+                ", streetNumber=" + streetNumber +
+                ", city='" + city + '\'' +
+                ", country='" + country + '\'' +
+                '}';
     }
 }

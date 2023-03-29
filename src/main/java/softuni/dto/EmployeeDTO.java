@@ -1,4 +1,4 @@
-package softuni.Demo.dto;
+package softuni.dto;
 
 import java.math.BigDecimal;
 
@@ -7,8 +7,6 @@ public class EmployeeDTO {
     private String firstName;
     private String lastName;
     private BigDecimal salary;
-
-
 
     public String getFirstName() {
         return firstName;
@@ -36,7 +34,10 @@ public class EmployeeDTO {
 
     @Override
     public String toString() {
-        return String.format("%s %s %.2f",
-                this.firstName, this.lastName, this.salary);
+        return "EmployeeDTO{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", salary=" + salary +
+                '}';
     }
 }

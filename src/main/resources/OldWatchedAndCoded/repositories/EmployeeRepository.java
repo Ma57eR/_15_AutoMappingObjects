@@ -1,8 +1,8 @@
-package softuni.repositories;
+package OldWatchedAndCoded.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import softuni.entities.Employee;
+import softuni.OldWatchedAndCoded.entities.Employee;
 
 import java.time.LocalDate;
 import java.util.List;

@@ -1,4 +1,4 @@
-package softuni.Demo.dto;
+package OldWatchedAndCoded.Demo.dto;
 
 import java.util.Set;
 import java.util.stream.Collectors;

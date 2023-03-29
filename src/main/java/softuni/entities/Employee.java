@@ -1,40 +1,24 @@
 package softuni.entities;
 
-import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Entity(name = "employees")
 public class Employee {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int id;
-    @Column(name = "first_name")
     private String firstName;
-    @Column(name = "last_name")
-    private String LastName;
+    private String lastName;
     private BigDecimal salary;
-    private LocalDate birthdate;
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Employee manager;
+    private LocalDate birthday;
+    private Address address;
 
-    public Employee() {
-    }
+    public Employee(String firstName, String lastName, BigDecimal salary, LocalDate birthday, Address address) {
 
-    public Employee(String firstName, String lastName, BigDecimal salary, LocalDate birthdate, Employee manager) {
         this.firstName = firstName;
-        LastName = lastName;
+        this.lastName = lastName;
         this.salary = salary;
-        this.birthdate = birthdate;
-        this.manager = manager;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        this.birthday = birthday;
+        this.address = address;
     }
 
     public String getFirstName() {
@@ -46,11 +30,11 @@ public class Employee {
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 
     public BigDecimal getSalary() {
@@ -61,19 +45,31 @@ public class Employee {
         this.salary = salary;
     }
 
-    public LocalDate getBirthdate() {
-        return birthdate;
+    public LocalDate getBirthday() {
+        return birthday;
     }
 
-    public void setBirthdate(LocalDate birthdate) {
-        this.birthdate = birthdate;
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
     }
 
-    public Employee getManager() {
-        return manager;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setManager(Employee manager) {
-        this.manager = manager;
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", salary=" + salary +
+                ", birthday=" + birthday +
+                ", address=" + address +
+                '}';
     }
 }

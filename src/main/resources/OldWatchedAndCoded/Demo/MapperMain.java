@@ -1,10 +1,9 @@
-package softuni.Demo;
+package OldWatchedAndCoded.Demo;
 
 import org.modelmapper.ModelMapper;
-import softuni.Demo.dto.EmployeeDTO;
-import softuni.Demo.dto.ManagerDTO;
-import softuni.Demo.entities.Address;
-import softuni.Demo.entities.Employee;
+import softuni.OldWatchedAndCoded.Demo.dto.ManagerDTO;
+import softuni.OldWatchedAndCoded.Demo.entities.Address;
+import softuni.OldWatchedAndCoded.Demo.entities.Employee;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

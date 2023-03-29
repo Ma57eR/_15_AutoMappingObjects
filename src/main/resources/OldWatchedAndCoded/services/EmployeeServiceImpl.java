@@ -1,9 +1,9 @@
-package softuni.services;
+package OldWatchedAndCoded.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import softuni.entities.Employee;
-import softuni.repositories.EmployeeRepository;
+import softuni.OldWatchedAndCoded.entities.Employee;
+import softuni.OldWatchedAndCoded.repositories.EmployeeRepository;
 
 import java.time.LocalDate;
 import java.util.List;

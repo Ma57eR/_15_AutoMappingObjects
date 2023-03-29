@@ -1,4 +1,4 @@
-package softuni.entities.dto;
+package OldWatchedAndCoded.entities.dto;
 
 public class CustomEmplDTO {
     private String firstName;
