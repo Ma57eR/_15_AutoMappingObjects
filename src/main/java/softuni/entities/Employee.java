@@ -3,10 +3,12 @@ package softuni.entities;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+
 @Entity(name = "employees")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     @Column(name = "first_name")
     private String firstName;
     @Column(name = "last_name")

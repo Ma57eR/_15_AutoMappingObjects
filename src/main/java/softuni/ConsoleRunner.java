@@ -1,15 +1,19 @@
 package softuni;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 import softuni.entities.Employee;
 import softuni.services.EmployeeService;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+@Component
 public class ConsoleRunner implements CommandLineRunner {
 
     private EmployeeService employeeService;
+
 
     public ConsoleRunner(EmployeeService employeeService) {
         this.employeeService = employeeService;
@@ -30,7 +34,7 @@ public class ConsoleRunner implements CommandLineRunner {
                 "First",
                 BigDecimal.TEN,
                 LocalDate.now()
-                , null
+                , manager
         );
 
         Employee second = new Employee(
@@ -41,6 +45,6 @@ public class ConsoleRunner implements CommandLineRunner {
                 , null
         );
 
-this.employeeService.save(first);
+        employeeService.save(first);
     }
 }

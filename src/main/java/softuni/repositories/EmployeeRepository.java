@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 import softuni.entities.Employee;
 import softuni.services.EmployeeService;
 
-import javax.persistence.criteria.CriteriaBuilder;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
